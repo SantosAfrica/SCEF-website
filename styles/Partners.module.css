@@ -14,7 +14,7 @@
     display: flex;
     align-items: center;
     /* Center items vertically within the carousel */
-    animation: scroll-left 20s linear infinite;
+    animation: scroll-left 15s linear infinite;
     white-space: nowrap;
     /* Prevents wrapping */
     width: var(--carousel-width);
@@ -26,17 +26,19 @@
     /* Use inline-flex to align children vertically */
     align-items: center;
     /* Center content vertically */
-    padding: 0 15px;
+    padding: 0 60px;
     /* Space between each logo */
     height: 100%;
     /* Ensure div takes the full height of the carousel */
 }
 
 .partnerCarousel img {
-    width: auto;
+    width: 150px;
     /* Set equal size for all logos */
     height: auto;
+    margin-left: 50px;
     /* Maintain aspect ratio */
+    transform: scale(2);
 }
 
 @keyframes scroll-left {

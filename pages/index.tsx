@@ -49,10 +49,15 @@ const Home: React.FC = () => {
             logo: '/images/CV+HR 1.png',
             name: 'CV+HR',
         },
+        {
+            logo: '/images/PRS1.png',
+            name: 'PRS1',
+        },
+
     ];
 
     return (
-        <div className="relative bg-[url('/images/homeBG.jpg')] bg-cover bg-no-repeat">
+        <div className=" relative bg-[url('/images/homeBG.jpg')] bg-cover bg-no-repeat">
             <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
             <div className="text-white relative z-10">
                 <Header />

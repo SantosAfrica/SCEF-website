@@ -20,7 +20,7 @@ const ImpactMap: React.FC<ImpactMapProps> = ({ impact }) => (
                     {index > 0 && (
                         <div className="absolute left-0 top-0 bottom-0 w-0.5">
                             <div
-                                className="absolute left-0 border-l-2 border-black"
+                                className="absolute left-0 border-l-2 border-white"
                                 style={{ height: '35%', top: '30%' }}
                             />
                         </div>
