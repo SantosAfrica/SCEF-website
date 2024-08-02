@@ -1,0 +1,47 @@
+/* styles/hero.module.css */
+.section {
+    padding-left: 1rem;
+    /* Mobile padding */
+    padding-top: 2rem;
+    /* Mobile padding */
+}
+
+.heading {
+    font-size: 2rem;
+    max-width: 100px;
+    /* Mobile font size */
+}
+
+.subheading {
+    font-size: 1rem;
+    /* Mobile font size */
+    max-width: 100%;
+    padding-top: 0.5rem;
+}
+
+
+
+@media (min-width: 768px) {
+    .section {
+        padding-left: 5rem;
+        /* Larger padding on larger screens */
+        padding-top: 5rem;
+    }
+
+    .heading {
+        font-size: 4rem;
+        max-width: 600px;
+        /* Larger font size on larger screens */
+    }
+
+    .subheading {
+        font-size: 1.5rem;
+        /* Larger font size on larger screens */
+        padding-top: 1rem;
+    }
+
+    .buttonContainer {
+        flex-direction: column;
+        /* Arrange buttons horizontally on larger screens */
+    }
+}

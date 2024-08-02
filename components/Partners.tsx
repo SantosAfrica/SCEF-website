@@ -23,11 +23,11 @@ const Partners: React.FC<PartnersProps> = ({ partners }) => {
 
     return (
         <section className="flex h-40 bg-blue items-center">
-            <h2 className="px-5 w-60  text-2xl text-white text-center mb-4">Our Partners</h2>
+            <h2 className="px-5 min-w-60  text-2xl text-white text-center mb-4">Our Partners</h2>
             <div className={styles.partnerCarouselWrapper}>
                 <div ref={carouselRef} className={styles.partnerCarousel}>
                     {/* Duplicate the partners to ensure continuous scroll */}
-                    {[...partners, ...partners, ...partners].map((partner, index) => (
+                    {[...partners, ...partners, ...partners, ...partners].map((partner, index) => (
                         <div key={index} className="text-center">
                             <img src={partner.logo} alt={partner.name} />
                         </div>

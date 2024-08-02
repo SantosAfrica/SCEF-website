@@ -9,3 +9,41 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.max-w-super {
+    max-width: 700px;
+}
+
+.max-w-md {
+    max-width: 500px;
+}
+
+.max-w-des {
+    max-width: 400px;
+}
+
+/* styles/globals.css */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* Prevent horizontal overflow */
+}
+
+* {
+    box-sizing: border-box;
+    /* Ensure padding and border are included in element's total width and height */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Ensure consistent font across the site */
+}
+
+.no-scroll {
+    overflow-y: hidden;
+    /* Hide the vertical scrollbar */
+    overflow-x: hidden;
+    /* Hide the horizontal scrollbar, if needed */
+}

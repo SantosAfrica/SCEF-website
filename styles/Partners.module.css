@@ -2,43 +2,63 @@
     overflow: hidden;
     position: relative;
     width: 100%;
-    /* Ensure it takes full width */
     display: flex;
     align-items: center;
-    /* Center carousel vertically in its wrapper */
     height: 100px;
-    /* Set a fixed height to control vertical centering */
 }
 
 .partnerCarousel {
     display: flex;
     align-items: center;
-    /* Center items vertically within the carousel */
-    animation: scroll-left 15s linear infinite;
+    animation: scroll-left 25s linear infinite;
     white-space: nowrap;
-    /* Prevents wrapping */
     width: var(--carousel-width);
-    /* Set dynamically via JS */
 }
 
 .partnerCarousel div {
     display: inline-flex;
-    /* Use inline-flex to align children vertically */
     align-items: center;
-    /* Center content vertically */
-    padding: 0 60px;
-    /* Space between each logo */
+    padding: 0 30px;
     height: 100%;
-    /* Ensure div takes the full height of the carousel */
 }
 
 .partnerCarousel img {
-    width: 150px;
-    /* Set equal size for all logos */
+    width: 100px;
     height: auto;
-    margin-left: 50px;
-    /* Maintain aspect ratio */
-    transform: scale(2);
+    margin: 0 20px;
+    transform: scale(1.5);
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .partnerCarouselWrapper {
+        height: 80px;
+    }
+
+    .partnerCarousel div {
+        padding: 0 20px;
+    }
+
+    .partnerCarousel img {
+        width: 60px;
+        margin: 0 15px;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .partnerCarouselWrapper {
+        height: 60px;
+    }
+
+    .partnerCarousel div {
+        padding: 0 20px;
+    }
+
+    .partnerCarousel img {
+        width: 40px;
+        margin: 0 20px;
+    }
 }
 
 @keyframes scroll-left {
@@ -47,6 +67,6 @@
     }
 
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-50%);
     }
 }

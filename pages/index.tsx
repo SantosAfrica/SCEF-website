@@ -50,21 +50,29 @@ const Home: React.FC = () => {
             name: 'CV+HR',
         },
         {
+            logo: '/images/RON1.png',
+            name: 'RON1',
+        },
+        {
+            logo: '/images/GETS 1.png',
+            name: 'GETS1',
+        },
+        {
             logo: '/images/PRS1.png',
             name: 'PRS1',
         },
-
     ];
 
     return (
-        <div className=" relative bg-[url('/images/homeBG.jpg')] bg-cover bg-no-repeat">
+        <div className="relative w-full bg-[url('/images/homeBG.jpg')] bg-cover bg-no-repeat">
             <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
             <div className="text-white relative z-10">
                 <Header />
-                <HeroSection title="Empowering Africa Through Education for All" subtitle="Innovating for a Brighter Tomorrow in Nigeria and Across Africa" />
-                <Services services={services} />
-                <ImpactMap impact={impact} />
-                <Partners partners={partners} />
+                <main className="relative z-10">
+                    <HeroSection title="Empowering Africa Through Education for All" subtitle='"Innovating for a Brighter Tomorrow in Nigeria and Across Africa"' />
+                    <ImpactMap impact={impact} />
+                    <Partners partners={partners} />
+                </main>
             </div>
         </div>
     );
