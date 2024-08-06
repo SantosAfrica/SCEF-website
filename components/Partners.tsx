@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import styles from '../styles/Partners.module.css';
 
 interface Partner {
@@ -29,7 +30,10 @@ const Partners: React.FC<PartnersProps> = ({ partners }) => {
                     {/* Duplicate the partners to ensure continuous scroll */}
                     {[...partners, ...partners, ...partners, ...partners].map((partner, index) => (
                         <div key={index} className="text-center">
-                            <img src={partner.logo} alt={partner.name} />
+                            <Image src={partner.logo} alt={partner.name}
+                                width={100} // Adjust width as needed
+                                height={50} // Adjust height as needed 
+                            />
                         </div>
                     ))}
                 </div>

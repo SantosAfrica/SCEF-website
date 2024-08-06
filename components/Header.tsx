@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from '../styles/header.module.css'; // Import the CSS module
 
 const Header: React.FC = () => {
@@ -8,7 +9,9 @@ const Header: React.FC = () => {
     return (
         <header className="bg-white text-black py-2 h-24 px-4 md:px-20 flex items-center w-full gap-4 relative">
             <div className="flex-shrink-0 mr-6">
-                <img src="/images/SCEF.svg" alt="SCEF Logo" className="h-10" />
+                <Image src="/images/SCEF.svg" alt="SCEF Logo" width={100} // Adjust width as needed
+                    height={40} // Adjust height as needed 
+                />
             </div>
 
             <div className="flex flex-grow items-center justify-between">
@@ -44,10 +47,16 @@ const Header: React.FC = () => {
                 {/* Buttons */}
                 <div className={`hidden lg:flex gap-4 ${styles.buttons}`}>
                     <button className="w-40 h-12 text-sm border-2 flex items-center justify-center gap-2 border-liteblue rounded-full text-liteblue">
-                        <img src="/images/donate.png" alt="Donate button icon" className="h-4" /> Donate
+                        <Image src="/images/donate.png" alt="Donate button icon"
+                            width={16} // Adjust width as needed
+                            height={16} // Adjust height as needed
+                            className="h-4 w-auto" /> Donate
                     </button>
                     <button className="w-40 h-12 text-sm border-2 flex items-center justify-center gap-2 border-liteblue rounded-full text-white bg-liteblue">
-                        <img src="/images/partnerWithUs.png" alt="Partner with us button icon" className="h-4" /> Partner with us
+                        <Image src="/images/partnerWithUs.png" alt="Partner with us button icon"
+                            width={16} // Adjust width as needed
+                            height={16} // Adjust height as needed
+                            className="h-4 w-auto" /> Partner with us
                     </button>
                 </div>
             </div>
@@ -70,10 +79,16 @@ const Header: React.FC = () => {
                     </nav>
                     <div className="mt-8 flex flex-col gap-4">
                         <button className="flex items-center justify-center gap-2 border-white border-2 rounded-full text-white bg-blue-600 px-6 py-3 text-xl">
-                            <img src="/images/donate.png" alt="Donate button icon" className="w-6 h-6" /> Donate
+                            <Image src="/images/donate.png" alt="Donate button icon"
+                                width={16} // Adjust width as needed
+                                height={16} // Adjust height as needed
+                                className="w-6 h-6" /> Donate
                         </button>
                         <button className="flex items-center justify-center gap-2 border-white border-2 rounded-full text-white bg-blue-800 px-6 py-3 text-xl">
-                            <img src="/images/partnerWithUs.png" alt="Partner with us button icon" className="w-6 h-6" /> Partner with us
+                            <Image src="/images/partnerWithUs.png" alt="Partner with us button icon"
+                                width={16} // Adjust width as needed
+                                height={16} // Adjust height as needed
+                                className="w-6 h-6" /> Partner with us
                         </button>
                     </div>
                 </div>

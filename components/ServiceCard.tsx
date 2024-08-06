@@ -36,7 +36,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             onClick={onClick}
             title={altText} // to provide alternative text for accessibility
         >
-            <div className="bg-gradient-to-t from-liteblue bg-opacity-10 h-full flex flex-col justify-end p-4">
+            <div className="bg-gradient-to-t from-liteblue bg-opacity-10 h-full flex flex-col justify-end p-4 ">
                 <h3
                     className={classNames(
                         'text-2xl font-bold mb-2 text-white',
@@ -45,7 +45,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                     )}
                 >
                     <p>{title}</p>
-                    <p className='font-thin font-poppins'>{place}</p>
+                    <p className='font-thin '>{place}</p>
                 </h3>
                 {isExpanded && (
                     <>
