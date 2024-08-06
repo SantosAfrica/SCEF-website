@@ -1,9 +1,10 @@
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
-import Services from '../components/Services';
 import ImpactMap from '../components/ImpactMap';
 import Partners from '../components/Partners';
+import AboutUs from '../components/AboutUs';
+import Services from '../components/Services';
 
 const Home: React.FC = () => {
     const services = [
@@ -64,15 +65,25 @@ const Home: React.FC = () => {
     ];
 
     return (
-        <div className="relative w-full bg-[url('/images/homeBG.jpg')] bg-cover bg-no-repeat">
-            <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-            <div className="text-white relative z-10">
+        <div className="flex flex-col font-poppins">
+
+            <div className="text-white z-10 relative  h-full bg-[url('/images/homeBG.jpg')] bg-cover bg-no-repeat">
+                <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
                 <Header />
                 <main className="relative z-10">
                     <HeroSection title="Empowering Africa Through Education for All" subtitle='"Innovating for a Brighter Tomorrow in Nigeria and Across Africa"' />
                     <ImpactMap impact={impact} />
                     <Partners partners={partners} />
                 </main>
+            </div>
+            <div>
+                <AboutUs />
+            </div>
+            <div>
+                <Services />
+            </div>
+            <div>
+                <Footer />
             </div>
         </div>
     );

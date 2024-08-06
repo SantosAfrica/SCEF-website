@@ -21,6 +21,13 @@ const config: Config = {
         "blue": "#10325A",
         "liteblue": "#3366CC",
       },
+      spacing: {
+        '128': '613px',
+        '120': '509px',
+      },
+      borderRadius: {
+        'large': '50px',
+      },
     },
   },
   plugins: [],

@@ -45,8 +45,6 @@
     }
 
     .buttons {
-        flex-direction: column;
-        width: 100%;
-        gap: 1rem;
+        display: none;
     }
 }

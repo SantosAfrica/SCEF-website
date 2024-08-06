@@ -1,4 +1,5 @@
 import '../styles/global.css'; // Import Tailwind CSS here
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {

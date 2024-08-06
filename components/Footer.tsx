@@ -1,7 +1,81 @@
+// components/Footer.tsx
+import React from 'react';
+import Link from 'next/link';
 
 const Footer: React.FC = () => (
-    <footer className="">
-        <p>© 2024 My Education Site</p>
+    <footer className="bg-blue w-full text-white py-10">
+        <div className="container w-full mx-auto px-6 lg:px-20">
+            <div className="flex justify-between w-full lg:w-full">
+                {/* Left section */}
+                <div className="w-4/12 lg:w-1/3 mb-6 lg:mb-0">
+                    <img src="/images/SCEFwhite.png" alt="SCEF Logo" className="mb-4 h-28 w-auto" />
+                    <address className="not-italic mb-4">
+                        54, Falolu Street, Surulere, Lagos
+                    </address>
+                    <p className="mb-1">+234-907-962-1110</p>
+                    <p className="mb-4">+234-810-976-5897</p>
+                    <a href="mailto:nesa.africa@gmail.com" className="text-blue-300">nesa.africa@gmail.com</a>
+                </div>
+
+                <div className='w-1/3'>
+                    {/* Center section */}
+                    <div className="w-full lg:w-full mb-8 lg:mb-0">
+                        <div className="flex justify-between">
+                            <div>
+                                <h4 className=" font-bold mb-8">Company</h4>
+                                <ul className=' flex flex-col gap-2'>
+                                    <li><Link href="/about" legacyBehavior><a className="hover:text-blue-300">About Us</a></Link></li>
+                                    <li><Link href="/mission" legacyBehavior><a className="hover:text-blue-300">Mission</a></Link></li>
+                                    <li><Link href="/vision" legacyBehavior><a className="hover:text-blue-300">Vision</a></Link></li>
+                                    <li><Link href="/get-involved" legacyBehavior><a className="hover:text-blue-300">Get involved</a></Link></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 className="font-bold mb-8">Award Category</h4>
+                                <ul className=' flex flex-col gap-2'>
+                                    <li><Link href="/nominate" legacyBehavior><a className="hover:text-blue-300">Nominate your Champion</a></Link></li>
+                                    <li><Link href="/award-timelines" legacyBehavior><a className="hover:text-blue-300">Award Timelines</a></Link></li>
+                                    <li><Link href="/sponsorship" legacyBehavior><a className="hover:text-blue-300">Sponsorship</a></Link></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right section */}
+                    <div className="w-full lg:w-full">
+                        <h4 className="font-bold mt-8 mb-4">Subscribe to our Newsletter</h4>
+                        <div className="flex mb-4">
+                            <input
+                                type="email"
+                                placeholder="Input your Email address"
+                                className="p-2 w-full rounded-l-lg focus:outline-none"
+                            />
+                            <button className="bg-black text-white p-2 rounded-r-lg">➔</button>
+                        </div>
+                        <p>
+                            Stay in the loop with the latest updates! Subscribe to our newsletter for exclusive insights, exciting announcements, and all things NESA 2024. Don't miss a beat.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div className="border-t-2 border-gray-200 mt-8 pt-4">
+                <div className="flex justify-between items-center py-4">
+                    <p>SCEF©2024</p>
+                    <ul className="flex space-x-4">
+                        <li><Link href="/terms" legacyBehavior><a className="hover:text-blue-300">Terms and Condition</a></Link></li>
+                        <li><Link href="/privacy" legacyBehavior><a className="hover:text-blue-300">Privacy</a></Link></li>
+                    </ul>
+                    <div className="flex space-x-4">
+                        <a href="#"><i className="fab fa-linkedin"></i></a>
+                        <a href="#"><i className="fab fa-facebook"></i></a>
+                        <a href="#"><i className="fab fa-twitter"></i></a>
+                        <a href="#"><i className="fab fa-instagram"></i></a>
+                        <a href="#"><i className="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 );
 

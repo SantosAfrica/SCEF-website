@@ -32,7 +32,7 @@ const Header: React.FC = () => {
 
                 {/* Navigation Links for Desktop */}
                 <nav
-                    className={`hidden lg:flex gap-4 font-poppins ${styles.nav}`}
+                    className={`hidden lg:flex gap-6 font-poppins ${styles.nav}`}
                 >
                     <Link href="/">Home</Link>
                     <Link href="/about">About</Link>

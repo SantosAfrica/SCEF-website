@@ -8,8 +8,8 @@ interface ImpactMapProps {
 }
 
 const ImpactMap: React.FC<ImpactMapProps> = ({ impact }) => (
-    <section className="px-4 md:pl-16 py-10 flex flex-col md:flex-row">
-        <div className="flex flex-col md:flex-row">
+    <section className="px-0 md:px-4 md:pl-16 py-10">
+        <div className="flex md:justify-start justify-center">
             {impact.map((item, index) => (
                 <div
                     key={index}
