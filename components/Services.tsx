@@ -61,11 +61,11 @@ const Services: React.FC = () => {
 
 
     return (
-        <section className="py-10 bg-white ">
-            <div className="container mx-auto px-auto lg:px-auto">
+        <section className="py-10 bg-white px-6 lg:px-20">
+            <div className="container  ">
                 <h2 className="text-3xl font-bold text-blue-900 mb-6">Our Services</h2>
-                <p className="text-lg text-gray-700 mb-10">Get to know SCEF and how we help strengthen Africa's educational system through our different chapters.</p>
-                <div className="flex flex-wrap pl-2 h-128 justify-between">
+                <p className="text-lg  text-gray-700 mb-10">Get to know SCEF and how we help strengthen Africa's educational system through our different chapters.</p>
+                <div className="w-full flex px-0 lg:px-6 h-128 justify-center">
                     {services.map((service, index) => (
                         <ServiceCard
                             key={index}

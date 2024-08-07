@@ -6,7 +6,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ title, subtitle }) => (
-    <section className="pl-4  md:pl-20 pt-8 md:pt-20 w-full text-center md:text-left">
+    <section className="pl-4  md:pl-20 pt-8 md:pt-8 w-full text-center md:text-left">
         <h1 className="text-4xl pt-28 md:pb-10 md:text-7xl leading-relaxed font-bold font-poppins max-w-super">
             {title}
         </h1>

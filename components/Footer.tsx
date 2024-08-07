@@ -5,7 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const Footer: React.FC = () => (
-    <footer className="bg-blue w-full font-poppins font-extralight text-white py-10">
+    <footer className="bg-blue w-full flex-row sm:flex-col font-poppins font-extralight text-white py-10">
         <div className="container w-full mx-auto px-6 lg:px-20">
             <div className="flex justify-between w-full lg:w-full">
                 {/* Left section */}
@@ -25,7 +25,7 @@ const Footer: React.FC = () => (
                 <div className='w-2/5'>
                     {/* Right section */}
                     <div className="w-full lg:w-full mb-8 lg:mb-0">
-                        <div className="flex justify-between">
+                        <div className="flex  justify-between">
                             <div>
                                 <h4 className=" font-bold mb-8">Company</h4>
                                 <ul className=' flex flex-col gap-6'>

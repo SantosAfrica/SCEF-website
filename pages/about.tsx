@@ -41,7 +41,7 @@ const About: React.FC = () => {
 
 
     return (
-        <div className="flex flex-col gap-4">
+        <div className="flex md:flex-col gap-4">
             <Header />
             <Objectives objectives={objectives} />
             <Milestones milestones={milestones} />

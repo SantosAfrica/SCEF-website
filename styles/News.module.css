@@ -1,0 +1,36 @@
+.newsCarouselWrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+
+.newsCarousel {
+    display: flex;
+    align-items: center;
+    animation: scroll-left 45s linear infinite;
+    white-space: nowrap;
+    gap: 50px;
+    width: var(--carousel-width);
+}
+
+.newsCarousel div {
+    display: inline-flex;
+    align-items: center;
+    padding: 0 40px;
+    height: 100%;
+}
+
+
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-46%);
+    }
+}

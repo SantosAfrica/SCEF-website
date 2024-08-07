@@ -19,7 +19,7 @@
 .partnerCarousel div {
     display: inline-flex;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 40px;
 
     height: 100%;
 }
@@ -46,13 +46,15 @@
         width: 60px;
         height: auto;
         margin: 0 15px;
-        transform: scale(2.5);
+        transform: scale(1.5);
     }
 }
 
-@media (max-width: 480px) {
+/* Adjustments for smaller screens */
+@media (max-width: 1000px) {
+
     .partnerCarouselWrapper {
-        height: 60px;
+        height: 80px;
     }
 
     .partnerCarousel div {
@@ -60,7 +62,25 @@
     }
 
     .partnerCarousel img {
+        width: 60px;
+        height: auto;
+        margin: 0 15px;
+        transform: scale(2);
+    }
+}
+
+@media (max-width: 480px) {
+    .partnerCarouselWrapper {
+        height: 40px;
+    }
+
+    .partnerCarousel div {
+        padding: 0px;
+    }
+
+    .partnerCarousel img {
         width: 40px;
+        height: auto;
         margin: 0 20px;
         transform: scale(1);
     }

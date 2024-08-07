@@ -5,6 +5,7 @@ import ImpactMap from '../components/ImpactMap';
 import Partners from '../components/Partners';
 import AboutUs from '../components/AboutUs';
 import Services from '../components/Services';
+import News from '../components/News';
 
 const Home: React.FC = () => {
     const services = [
@@ -37,6 +38,15 @@ const Home: React.FC = () => {
         },
     ];
 
+    const news = [
+        {
+            description: 'Nomination for NESA Nigeria award 2024 hosted by SCEF will be open starting from july 2024',
+        },
+        {
+            description: 'Eduaid Africa has been recorded as one of the crowdfunding playform that has supported the growth and empowerment of education for all in Africa',
+        },
+
+    ];
     const partners = [
         {
             logo: '/images/GET2.png',
@@ -70,6 +80,7 @@ const Home: React.FC = () => {
             <div className="text-white z-10 relative  h-full bg-[url('/images/homeBG.jpg')] bg-cover bg-no-repeat">
                 <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
                 <Header />
+                <News news={news} />
                 <main className="relative z-10">
                     <HeroSection title="Empowering Africa Through Education for All" subtitle='"Innovating for a Brighter Tomorrow in Nigeria and Across Africa"' />
                     <ImpactMap impact={impact} />
