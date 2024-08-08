@@ -13,7 +13,7 @@ const Services: React.FC = () => {
 
     const services = [
         {
-            image: '/images/homeBG.jpg',
+            image: 'Service 1.jpg',
             altText: 'EduAid Africa',
             place: 'Africa',
             title: 'EduAid Africa',

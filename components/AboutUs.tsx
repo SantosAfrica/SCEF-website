@@ -16,12 +16,12 @@ const AboutUs: React.FC = () => (
                 </div>
                 <div className=" w-4/5 max-w-120 lg:w-2/6 flex flex-col justify-center gap:10 lg:gap-4 flex-wrap">
                     <div className='flex gap-6 lg:gap-2'>
-                        <Image src="/images/homeBG.jpg" alt="Classroom with students engaged in learning" className="w-1/2 h-auto mb-4 lg:mb-0 lg:mr-2 lg:ml-0 rounded-large rounded-tl-none" width={500} height={300} />
-                        <Image src="/images/homeBG.jpg" alt="Classroom with technology" className="w-1/2 h-auto mb-4 lg:mb-0 lg:ml-2 rounded-large rounded-tr-none" width={500} height={300} />
+                        <Image src="/images/about1.png" alt="Classroom with students engaged in learning" className="w-1/2 h-auto mb-4 lg:mb-0 lg:mr-2 lg:ml-0 rounded-large rounded-tl-none" width={500} height={300} />
+                        <Image src="/images/about2.png" alt="Classroom with technology" className="w-1/2 h-auto mb-4 lg:mb-0 lg:ml-2 rounded-large rounded-tr-none" width={500} height={300} />
                     </div>
                     <div className='flex gap-6 lg:gap-2'>
-                        <Image src="/images/homeBG.jpg" alt="Award trophy" className="w-1/2 h-auto mb-4 lg:mb-0 lg:mr-2 lg:ml-0 rounded-large rounded-bl-none" width={500} height={300} />
-                        <Image src="/images/homeBG.jpg" alt="Technology in education" className="w-1/2 h-auto mb-4 lg:mb-0 lg:ml-2 rounded-large rounded-br-none" width={500} height={300} />
+                        <Image src="/images/about3.png" alt="Award trophy" className="w-1/2 h-auto mb-4 lg:mb-0 lg:mr-2 lg:ml-0 rounded-large rounded-bl-none" width={500} height={300} />
+                        <Image src="/images/about4.png" alt="Technology in education" className="w-1/2 h-auto mb-4 lg:mb-0 lg:ml-2 rounded-large rounded-br-none" width={500} height={300} />
                     </div>
                 </div>
             </div>

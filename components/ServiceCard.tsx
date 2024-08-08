@@ -40,7 +40,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 <h3
                     className={classNames(
                         'text-sm sm:text-2xl font-bold mb-2 text-white',
-                        { 'transform -rotate-90 -translate-y-14 -translate-x-1 whitespace-nowrap': !isExpanded },
+                        { 'transform -rotate-90 -translate-y-0 -translate-x-0 md:-translate-y-10 md:-translate-x-4 whitespace-nowrap': !isExpanded },
                         { 'rotate-0': isExpanded }
                     )}
                 >
@@ -50,7 +50,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
                 {isExpanded && (
                     <>
                         <p className="text-white text-sm sm:text-lg">{description}</p>
-                        <a href={buttonLink} className="bg-blue-500 text-sm sm:text-lg text-white px-2 py-2 rounded-full inline-block">{buttonText}</a>
+                        <a href={buttonLink} className="flex text-xs sm:text-sm text-blue w-fit sm:w-40 px-1 mt-6 my-2 sm:px-2 py-2 bg-white rounded-full ">{buttonText}</a>
                     </>
                 )}
             </div>
