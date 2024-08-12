@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        "home-bg": "url('/public/images/homeBG')",
+        "home": "url('/public/images/homeBG')",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
@@ -24,6 +24,7 @@ const config: Config = {
       spacing: {
         '128': '613px',
         '120': '509px',
+        '100': '400px',
       },
       borderRadius: {
         'large': '50px',

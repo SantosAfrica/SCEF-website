@@ -13,7 +13,7 @@ const Services: React.FC = () => {
 
     const services = [
         {
-            image: 'Service 1.jpg',
+            image: '/images/about1.png',
             altText: 'EduAid Africa',
             place: 'Africa',
             title: 'EduAid Africa',
@@ -22,7 +22,7 @@ const Services: React.FC = () => {
             buttonLink: '#'
         },
         {
-            image: '/images/service2.jpg',
+            image: '/images/about2.png',
             altText: 'Service 2',
             place: 'Africa',
             title: 'New School Award',
@@ -31,7 +31,7 @@ const Services: React.FC = () => {
             buttonLink: '#'
         },
         {
-            image: '/images/service3.jpg',
+            image: '/images/about3.png',
             altText: 'Service 3',
             place: 'Africa',
             title: 'Advocacy Services',
@@ -40,7 +40,7 @@ const Services: React.FC = () => {
             buttonLink: '#'
         },
         {
-            image: '/images/service4.jpg',
+            image: '/images/about4.png',
             altText: 'Service 4',
             place: 'Africa',
             title: 'Education Online',
@@ -49,7 +49,7 @@ const Services: React.FC = () => {
             buttonLink: '#'
         },
         {
-            image: '/images/service5.jpg',
+            image: '/images/homeBG.jpg',
             altText: 'Service 5',
             place: 'Africa',
             title: 'E-Library',
@@ -61,11 +61,11 @@ const Services: React.FC = () => {
 
 
     return (
-        <section className="py-10 bg-white px-6 lg:px-20">
+        <section className="py-10 mb-40 md:mb-16  bg-white px-6 lg:px-20">
             <div className="container  ">
-                <h2 className="text-3xl font-bold text-blue-900 mb-6">Our Services</h2>
+                <h2 className="heading w-fit font-poppins text-3xl md:text-4xl xl:text-5xl text-blue">Our Services</h2>
                 <p className="text-lg  text-gray-700 mb-10">Get to know SCEF and how we help strengthen Africa's educational system through our different chapters.</p>
-                <div className="w-full flex px-0 lg:px-6 h-128 justify-center">
+                <div className="w-full flex px-0 lg:px-6 h-72 md:h-128 justify-center">
                     {services.map((service, index) => (
                         <ServiceCard
                             key={index}

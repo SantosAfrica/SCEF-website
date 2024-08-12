@@ -6,6 +6,8 @@ import Partners from '../components/Partners';
 import AboutUs from '../components/AboutUs';
 import Services from '../components/Services';
 import News from '../components/News';
+import OurImpact from '../components/OurImpact';
+
 
 const Home: React.FC = () => {
     const services = [
@@ -35,6 +37,21 @@ const Home: React.FC = () => {
         {
             title: 'Awarded leaders',
             description: '300+',
+        },
+    ];
+
+    const ourImpact = [
+        {
+            title: 'Chapters',
+            description: '4',
+        },
+        {
+            title: 'Volunteers',
+            description: '200+',
+        },
+        {
+            title: 'Africans helped',
+            description: '3,000+',
         },
     ];
 
@@ -77,9 +94,8 @@ const Home: React.FC = () => {
     return (
         <div className="flex flex-col font-poppins">
 
-            <div className="text-white z-10 relative  h-full bg-[url('/images/homeBG.jpg')] bg-cover bg-no-repeat">
+            <div className="text-white z-10 relative  min-h-full bg-[url('/images/homeBG.jpg')] bg-cover bg-no-repeat">
                 <div className="absolute inset-0 bg-black opacity-50 z-0"></div>
-                <Header />
                 <News news={news} />
                 <main className="relative z-10">
                     <HeroSection title="Empowering Africa Through Education for All" subtitle='"Innovating for a Brighter Tomorrow in Nigeria and Across Africa"' />
@@ -87,14 +103,14 @@ const Home: React.FC = () => {
                     <Partners partners={partners} />
                 </main>
             </div>
-            <div>
+            <div className='h-full'>
                 <AboutUs />
             </div>
-            <div>
+            <div className='h-full'>
                 <Services />
             </div>
-            <div>
-                <Footer />
+            <div className="h-128">
+                <OurImpact impact={ourImpact} />
             </div>
         </div>
     );

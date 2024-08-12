@@ -22,7 +22,7 @@ const News: React.FC<NewsProps> = ({ news }) => {
 
     return (
         <section className="flex w-fit  sm:h-fit  font-poppins backdrop-blur-xl h-full bg-white/30 text-white items-center justify-between">
-            <h2 className=" flex pl-2  pr-2 md:pr-6 min-w-fit md:pl-20 py-3  text-white text-sm  h-full items-center justify-start border-r-2 border-r-white">News and Updates</h2>
+            <h2 className=" flex pl-2  pr-2 md:pr-6 min-w-fit md:pl-8 lg:pl-20 py-3  text-white text-sm  h-full items-center justify-start border-r-2 border-r-white">News and Updates</h2>
             <div className={styles.newsCarouselWrapper}>
                 <div ref={carouselRef} className={styles.newsCarousel}>
                     {/* Duplicate the news to ensure continuous scroll */}

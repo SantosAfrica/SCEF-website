@@ -2,9 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 
 const AboutUs: React.FC = () => (
-    <section className=" py-10 w-full lg:px-8 xl:px-14  lg:py-10 h:auto lg:h-128 flex items-center bg-white">
-        <div className="container mx-auto px-6 xl:px-8 flex flex-col md:px-20">
-            <h2 className="text-3xl font-bold text-blue-900 mb-6">About SCEF</h2>
+    <section className=" py-10 w-full font-poppins lg:px-2 text-liteblue xl:px-14  lg:py-10 h:auto lg:h-128 flex items-center bg-white">
+        <div className="container  px-6 xl:px-8 flex flex-col md:px-8">
+            <h2 className=" heading w-fit font-poppins text-3xl md:text-4xl lg:text-5xl mb-6">About SCEF</h2>
             <div className="flex flex-wrap flex-col items-center gap-8 lg:justify-between lg:flex-row lg:flex-nowrap">
                 <div className="w-full flex flex-col lg:w-3/6 mb-6 lg:mb-0 ">
                     <p className=" text-lg text-gray-700 mb-4 text-justify lg:text-left ">

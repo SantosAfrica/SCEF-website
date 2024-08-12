@@ -48,6 +48,15 @@ body {
     /* Hide the horizontal scrollbar, if needed */
 }
 
+.heading {
+    padding: 0;
+    padding-bottom: 10px;
+    font-weight: bolder;
+    margin: 0;
+    margin-bottom: 40px;
+    border-bottom: solid 5px #FFD700;
+}
+
 .container {
     width: 100%;
 }

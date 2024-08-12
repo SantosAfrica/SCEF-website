@@ -24,7 +24,7 @@ const Partners: React.FC<PartnersProps> = ({ partners }) => {
 
     return (
         <section className="flex h-16 sm:h-28  bg-blue items-center justify-between">
-            <h2 className="flex px-4 sm:px-8 min-w-fit md:pl-20 md:text-2xl text-sm sm:text-xl h-full  text-white items-center justify-between border-r-2 border-r-white">Our Partners</h2>
+            <h2 className="flex px-4 sm:px-8 min-w-fit md:pl-10 lg:pl-20 md:text-2xl text-sm sm:text-xl h-full  text-white items-center justify-between border-r-2 border-r-white">Our Partners</h2>
             <div className={styles.partnerCarouselWrapper}>
                 <div ref={carouselRef} className={styles.partnerCarousel}>
                     {/* Duplicate the partners to ensure continuous scroll */}
