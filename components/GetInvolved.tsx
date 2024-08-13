@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const GetInvolved: React.FC = () => {
     const cards = [
@@ -88,7 +89,7 @@ const GetInvolved: React.FC = () => {
                 <div className="flex justify-center gap-6">
                     {displayedCards().map((card, index) => (
                         <div key={index} className=" flex flex-col py-6 h-fit min-h-110 w-full sm:h-130 sm:w-124  sm:pt-26 sm:py-20 text-white bg-liteblue rounded-2xl shadow-lg p-6  transform transition-all duration-300">
-                            <img
+                            <Image
                                 src={card.image}
                                 alt={card.title}
                                 className=" mb-4 h-32 sm:h-52"

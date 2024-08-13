@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const NewsUpdates: React.FC = () => {
     const newsItems = [
@@ -99,7 +100,7 @@ const NewsUpdates: React.FC = () => {
             <div className="flex justify-center px-4 gap-6">
                 {displayedItems().map((item, index) => (
                     <div key={index} className="bg-white w-full sm:w-100 min-h-120 rounded-lg shadow-lg h-fit">
-                        <img
+                        <Image
                             src={item.image}
                             alt={item.title}
                             className="w-full mb-2"
