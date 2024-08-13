@@ -20,6 +20,7 @@ const config: Config = {
       colors: {
         "blue": "#10325A",
         "liteblue": "#3366CC",
+        "yellow": "#FFD700",
       },
       spacing: {
         '130': '670px',

@@ -7,7 +7,7 @@ const Header: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     return (
-        <header className="bg-white text-black pt-6 h-10 sm:h-18 px-4 md:px-8 lg:px-20 flex items-center w-full gap-2 relative">
+        <header className="bg-white text-black pt-6 h-10 sm:h-20 px-4 md:px-8 lg:px-20 flex items-center justify-center w-full gap-2 relative">
             <div className="flex-shrink-0 mr-6">
                 <Image src="/images/SCEF.svg" alt="SCEF Logo" width={100} // Adjust width as needed
                     height={40} // Adjust height as needed 

@@ -3,24 +3,19 @@ import React, { useState, useEffect } from 'react';
 const GetInvolved: React.FC = () => {
     const cards = [
         {
-            title: 'Volunteer!',
+            title: 'Volunteer',
             description: 'Founded to transform African education, Edu-Aid Africa is dedicated to providing educational resources and support to underprivileged areas across Africa.',
-            image: '/images/about1.png',
+            image: '/images/volunteer.svg',
         },
         {
-            title: 'Donate!',
+            title: 'Membership',
             description: 'Support our mission by donating to provide educational resources, scholarships, and infrastructure improvements in underserved regions.',
-            image: '/images/about1.png',
+            image: '/images/membership.svg',
         },
         {
-            title: 'Partner!',
+            title: 'Partnership',
             description: 'Join us as a partner to amplify our impact and bring sustainable change to the education sector in Africa.',
-            image: '/images/about1.png',
-        },
-        {
-            title: 'Sponsor!',
-            description: 'Become a sponsor and help us achieve our goals by providing financial or in-kind support to our initiatives.',
-            image: '/images/about1.png',
+            image: '/images/partnership.svg',
         },
         // Add more cards as needed
     ];
@@ -90,18 +85,18 @@ const GetInvolved: React.FC = () => {
                     &lt;
                 </button>
 
-                <div className="flex justify-center  gap-6">
+                <div className="flex justify-center gap-6">
                     {displayedCards().map((card, index) => (
-                        <div key={index} className=" flex flex-col h-110 w-full sm:h-130 sm:w-124 text-white bg-liteblue rounded-lg shadow-lg p-6  transform transition-all duration-300">
+                        <div key={index} className=" flex flex-col py-6 h-fit min-h-110 w-full sm:h-130 sm:w-124  sm:pt-26 sm:py-20 text-white bg-liteblue rounded-2xl shadow-lg p-6  transform transition-all duration-300">
                             <img
                                 src={card.image}
                                 alt={card.title}
-                                className="rounded-lg mb-4"
+                                className=" mb-4 h-32 sm:h-52"
                             />
 
-                            <div className='flex flex-col justify-between flex-grow'>
-                                <div>
-                                    <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
+                            <div className='flex sm:p-4 sm:px-8 flex-col items-center gap-6 sm:gap-16 flex-grow'>
+                                <div className='flex flex-col gap-8'>
+                                    <h3 className="text-4xl text-yellow font-bold mb-2 border-b-2 pb-6">{card.title}</h3>
                                     <p className="mb-4">{card.description}</p>
                                 </div>
                                 <button className=" w-fit bg-liteblue border-2 border-white py-2 px-4 rounded-lg mt-4">
