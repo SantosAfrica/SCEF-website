@@ -57,6 +57,24 @@ body {
     border-bottom: solid 5px #FFD700;
 }
 
+.swipe-enter {
+    transform: translateX(100%);
+}
+
+.swipe-enter-active {
+    transform: translateX(0%);
+    transition: transform 500ms ease-in-out;
+}
+
+.swipe-exit {
+    transform: translateX(0%);
+}
+
+.swipe-exit-active {
+    transform: translateX(-100%);
+    transition: transform 500ms ease-in-out;
+}
+
 .container {
     width: 100%;
 }

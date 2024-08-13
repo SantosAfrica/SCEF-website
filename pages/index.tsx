@@ -1,5 +1,3 @@
-import Header from '../components/Header';
-import Footer from '../components/Footer';
 import HeroSection from '../components/HeroSection';
 import ImpactMap from '../components/ImpactMap';
 import Partners from '../components/Partners';
@@ -7,7 +5,8 @@ import AboutUs from '../components/AboutUs';
 import Services from '../components/Services';
 import News from '../components/News';
 import OurImpact from '../components/OurImpact';
-
+import GetInvolved from '../components/GetInvolved';
+import NewsUpdates from '../components/NewsUpdates';
 
 const Home: React.FC = () => {
     const services = [
@@ -103,14 +102,20 @@ const Home: React.FC = () => {
                     <Partners partners={partners} />
                 </main>
             </div>
-            <div className='h-full'>
+            <div className='h-full min-h-128'>
                 <AboutUs />
             </div>
-            <div className='h-full'>
+            <div className='h-full min-h-128'>
                 <Services />
             </div>
-            <div className="h-128">
+            <div className="h-full">
                 <OurImpact impact={ourImpact} />
+            </div>
+            <div className="h-full min-h-128">
+                <GetInvolved />
+            </div>
+            <div className="h-full min-h-128">
+                <NewsUpdates />
             </div>
         </div>
     );

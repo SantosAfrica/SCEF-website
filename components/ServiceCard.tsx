@@ -29,8 +29,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div
             className={classNames(
                 'transition-all duration-500 bg-cover bg-center rounded-lg shadow-lg overflow-hidden',
-                { ' w-14 sm:w-20 md:w-32 lg:w-40 mx-1 h-100 md:h-128 cursor-pointer': !isExpanded },
-                { ' w-3/6 md:w-6/12 lg:w-6/12 h-100 md:h-128': isExpanded }
+                { ' w-full sm:w-20 md:w-32 lg:w-40 mx-1 h-fit sm:h-100  md:h-128 cursor-pointer': !isExpanded },
+                { ' w-full md:w-6/12 lg:w-6/12 h-100 sm:h-100 md:h-128': isExpanded }
             )}
             style={{ backgroundImage: `url(${image})` }}
             onClick={onClick}
@@ -39,8 +39,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             <div className="bg-gradient-to-t from-liteblue  h-full flex flex-col justify-end p-4 ">
                 <h3
                     className={classNames(
-                        'text-sm sm:text-2xl font-bold mb-2 text-white',
-                        { 'transform -rotate-90 -translate-y-0 -translate-x-0 md:-translate-y-10 md:-translate-x-4 whitespace-nowrap': !isExpanded },
+                        'text-sm sm:text-xl md:text-2xl font-bold mb-2   text-white',
+                        { 'transform sm:-rotate-90 sm:-translate-y-0 sm:-translate-x-0 md:-translate-y-10 md:-translate-x-4 whitespace-nowrap': !isExpanded },
                         { 'rotate-0': isExpanded }
                     )}
                 >

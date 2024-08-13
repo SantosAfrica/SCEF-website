@@ -22,8 +22,11 @@ const config: Config = {
         "liteblue": "#3366CC",
       },
       spacing: {
+        '130': '670px',
         '128': '613px',
+        '124': '585px',
         '120': '509px',
+        '110': '475px',
         '100': '400px',
       },
       borderRadius: {
