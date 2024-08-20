@@ -6,12 +6,12 @@ import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps) {
     return <div>
-        <div className='h-full w-full'>
-            <Header />;
+        <div className='h-full min-h-fit'>
+            <Header />
         </div>
-        <Component {...pageProps} />;
+        <Component {...pageProps} />
         <div className='w-full h-full flex justify-end '>
-            <Footer />;
+            <Footer />
         </div>
 
     </div>

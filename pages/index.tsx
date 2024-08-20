@@ -7,6 +7,9 @@ import News from '../components/News';
 import OurImpact from '../components/OurImpact';
 import GetInvolved from '../components/GetInvolved';
 import NewsUpdates from '../components/NewsUpdates';
+import SuccessStories from '@/components/SuccessStories';
+import Reviews from '@/components/Reviews';
+import CountriesSection from '@/components/CountriesSection';
 
 const Home: React.FC = () => {
     const services = [
@@ -111,11 +114,20 @@ const Home: React.FC = () => {
             <div className="h-full">
                 <OurImpact impact={ourImpact} />
             </div>
-            <div className="h-full min-h-128">
+            <div className="h-fit min-h-128">
                 <GetInvolved />
             </div>
             <div className="h-full min-h-128">
                 <NewsUpdates />
+            </div>
+            <div>
+                <SuccessStories />
+            </div>
+            <div>
+                <Reviews />
+            </div>
+            <div>
+                <CountriesSection />
             </div>
         </div>
     );

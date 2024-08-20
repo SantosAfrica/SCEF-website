@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 const Footer: React.FC = () => (
     <footer className=" bg-blue w-full h-full  text-xs font-poppins font-extralight text-white py-10">
-        <div className="container w-full mx-auto px-6 lg:px-20">
+        <div className="container w-full px-6 lg:px-20">
             <div className="flex flex-col w-full sm:flex-row sm:justify-between gap-6 sm:gap-0 sm:items-start items-center">
                 {/* Left section */}
                 <div className="w-full sm:w-2/6 flex flex-col items-center sm:items-start  justify-center lg:w-1/3 gap-4 mb-6 lg:mb-0">
@@ -59,7 +59,7 @@ const Footer: React.FC = () => (
                             <input
                                 type="email"
                                 placeholder="Input your Email address"
-                                className="p-2 w-full rounded-l-lg focus:outline-none"
+                                className="p-2 w-full text-black rounded-l-lg focus:outline-none"
                             />
                             <button className="bg-black text-white p-2 rounded-r-lg">➔</button>
                         </div>

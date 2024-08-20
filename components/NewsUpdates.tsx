@@ -48,7 +48,7 @@ const NewsUpdates: React.FC = () => {
         const updateVisibleNewsItems = () => {
             const width = window.innerWidth;
             if (width >= 1500) {
-                setVisibleNewsItems(4); // Large screens
+                setVisibleNewsItems(3); // Large screens
             } else if (width >= 1024) {
                 setVisibleNewsItems(3);
             } else if (width >= 768) {
@@ -92,15 +92,15 @@ const NewsUpdates: React.FC = () => {
     };
 
     return (
-        <section className="py-10 px-4 bg-gray-100">
-            <h2 className="text-2xl font-bold text-center mb-4">News and Updates</h2>
-            <p className="text-gray-600 text-center mb-8">
+        <section className="py-10 px-8 lg:px-20  bg-gray-100">
+            <h2 className=" heading w-fit font-poppins text-3xl md:text-4xl xl:text-5xl text-blue mb-4">News and Updates</h2>
+            <p className="text-gray-600 w-110 mb-8">
                 Stay updated with recent happenings and exciting news on SCEF and Education in Africa.
             </p>
-            <div className="flex justify-center px-4 gap-6">
+            <div className="flex justify-center px-4 gap-6 lg:gap-20">
                 {displayedItems().map((item, index) => (
                     <div key={index} className="bg-white w-full sm:w-100 min-h-120 rounded-lg shadow-lg h-fit">
-                        <Image
+                        <img
                             src={item.image}
                             alt={item.title}
                             className="w-full mb-2"
