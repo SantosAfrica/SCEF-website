@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import styles from '../styles/News.module.css';
-
+import styles from '../styles/News.module.css'
 interface News {
     description: string;
 }

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { TfiArrowCircleLeft, TfiArrowCircleRight } from "react-icons/tfi";
 
 const countries = [
     {
@@ -16,7 +17,7 @@ const countries = [
     {
         name: 'SCEF Ghana',
         description: 'Visit the Ghana official SCEF website and get involved directly',
-        flag: '/images/flags/Ghana.png',
+        flag: '/images/flags/ghana.png',
         link: '#',
     },
     {
@@ -25,24 +26,7 @@ const countries = [
         flag: '/images/flags/nigeria.png',
         link: '#',
     },
-    {
-        name: 'SCEF Egypt',
-        description: 'Visit the Egypt official SCEF website and get involved directly',
-        flag: '/images/flags/kenya.png',
-        link: '#',
-    },
-    {
-        name: 'SCEF Tanzania',
-        description: 'Visit the Tanzania official SCEF website and get involved directly',
-        flag: '/images/flags/kenya.png',
-        link: '#',
-    },
-    {
-        name: 'SCEF Uganda',
-        description: 'Visit the Uganda official SCEF website and get involved directly',
-        flag: '/images/flags/kenya.png',
-        link: '#',
-    },
+    // ... other countries ...
 ];
 
 const CountriesSection: React.FC = () => {
@@ -59,42 +43,57 @@ const CountriesSection: React.FC = () => {
     };
 
     return (
-        <section className="py-16 bg-white">
+        <section className="py-8 md:py-16 bg-white">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl font-semibold text-blue-900 mb-4">SCEF in every African Country</h2>
-                <div className='flex justify-center items-center'>
-                    <p className="flex w-3/4 text-gray-700 text-left mb-8">
-                        SCEF is committed to reaching every corner of the African continent. Each country has a dedicated portal to manage local educational projects, ensuring tailored solutions and direct impact in every community.
-                    </p>
-                    <div className='flex  h-fit justify-center items-center w-1/4 gap-3'>
+                <div className="flex flex-col lg:flex-row justify-between items-start mb-8">
+                    <div className="w-full lg:w-[761px] mt-4 lg:mt-[107px] ml-0 lg:ml-[80px]">
+                        <h2 className="text-2xl md:text-3xl font-semibold text-blue-900 mb-4">
+                            SCEF in every African Country
+                        </h2>
+                        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center">
+                            <p className="text-sm md:text-base text-gray-700 mb-4 lg:mb-0 lg:mr-4 lg:flex-grow">
+                                SCEF is committed to reaching every corner of the African continent. Each country has a dedicated portal to manage local educational projects, ensuring tailored solutions and direct impact in every community.
+                            </p>
+                        </div>
+                    </div>
+                    <div className="hidden lg:flex items-center gap-4 mt-4 lg:mt-[107px] w-full lg:w-auto justify-end">
                         <button
                             onClick={handlePrev}
-                            className=" px-7 h-16 border black rounded-full"
+                            className="text-2xl md:text-3xl text-gray-500 hover:text-blue-500"
                         >
-                            &#8249;
+                            <TfiArrowCircleLeft />
                         </button>
                         <button
                             onClick={handleNext}
-                            className=" px-7 h-16 border black rounded-full"
+                            className="text-2xl md:text-3xl text-gray-500 hover:text-blue-500"
                         >
-                            &#8250;
+                            <TfiArrowCircleRight />
                         </button>
                     </div>
-
                 </div>
 
-                <div className="relative overflow-hidden mx-10">
-                    <div className="flex justify-start space-x-8 transition-transform duration-500 ease-in-out"
-                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+                <div className="relative overflow-hidden">
+                    <div
+                        className="flex transition-transform duration-500 ease-in-out"
+                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    >
                         {countries.map((country, index) => (
-                            <div key={index} className="flex-none w-full sm:w-1/2 md:w-1/3 lg:w-1/4 p-4">
-                                <div className="flex flex-col items-left  p-6 rounded-lg w-64 h-full">
-                                    <img src={country.flag} alt={country.name} className="w-16 h-16 rounded-full mb-4" />
-                                    <h3 className="text-xl text-left font-semibold text-gray-800">{country.name}</h3>
-                                    <p className="text-gray-500 text-left mb-4">{country.description}</p>
+                            <div key={index} className="flex-none w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 p-2 md:p-4">
+                                <div className="flex flex-col items-start p-4 md:p-6 rounded-lg w-full h-full">
+                                    <img
+                                        src={country.flag}
+                                        alt={country.name}
+                                        className="w-12 h-12 md:w-16 md:h-16 rounded-full mb-4"
+                                    />
+                                    <h3 className="text-lg md:text-xl font-semibold text-gray-800 mb-2">
+                                        {country.name}
+                                    </h3>
+                                    <p className="text-sm md:text-base text-gray-500 mb-4">
+                                        {country.description}
+                                    </p>
                                     <a
                                         href={country.link}
-                                        className="bg-transparent border border-liteblue text-liteblue rounded-full py-2 px-4 hover:bg-blue-500 hover:text-white transition-colors duration-300"
+                                        className="bg-transparent border border-[#3277C8] text-[#3277C8] text-sm md:text-base rounded-full py-2 px-6 hover:bg-[#3277C8] hover:text-white transition-colors duration-300"
                                     >
                                         Visit their Website
                                     </a>
@@ -102,17 +101,30 @@ const CountriesSection: React.FC = () => {
                             </div>
                         ))}
                     </div>
-
-
                 </div>
 
-                {/* Link to Portal */}
-                <div className="mt-8">
+                <div className="flex justify-center items-center mt-4 lg:hidden">
+                    <button
+                        onClick={handlePrev}
+                        className="text-2xl md:text-3xl text-gray-500 hover:text-blue-500 mx-2"
+                    >
+                        <TfiArrowCircleLeft />
+                    </button>
+                    <button
+                        onClick={handleNext}
+                        className="text-2xl md:text-3xl text-gray-500 hover:text-blue-500 mx-2"
+                    >
+                        <TfiArrowCircleRight />
+                    </button>
+                </div>
+
+                <div className="mt-8 text-right">
                     <a
                         href="#"
-                        className="text-liteblue hover:underline text-lg"
+                        className="text-[#3277C8] hover:underline text-sm md:text-lg inline-block"
+                        style={{ borderBottom: '1px solid currentColor' }}
                     >
-                        Visit your country’s Portal
+                        Visit your country's Portal
                     </a>
                 </div>
             </div>

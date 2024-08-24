@@ -1,50 +1,75 @@
 /* styles/header.module.css */
-.navContainer {
-    flex-direction: row;
-}
-
 .nav {
-    padding-left: 1rem;
-}
-
-.buttons {
-    flex-direction: row;
-}
-
-.overlay {
-    background-color: #007bff;
-    /* Blue background */
-    color: white;
-    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    z-index: 50;
-    /* Ensure it is on top of other elements */
 }
 
-.overlay button {
-    border: 2px solid white;
-    /* White border */
+.nav a, .nav div {
+    transition: color 0.3s ease;
+    width: 100%;
+    text-align: center;
     font-size: 1.25rem;
-    /* Adjust font size */
-    padding: 0.75rem 1.5rem;
-    /* Adjust padding for button size */
+    padding: 1rem 0;
+    border-bottom: 1px solid #e5e7eb;
 }
 
-@media (max-width: 1030px) {
-    .navContainer {
-        flex-direction: column;
-        align-items: flex-start;
+.nav a:last-child,
+.nav div:last-child {
+    border-bottom: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.buttons button {
+    transition: all 0.3s ease;
+    margin: 0.5rem 0;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 1024px) {
+    .nav {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
     }
 
-    .nav {
-        display: none;
-        /* Hide navigation links on mobile */
+    .nav a, .nav div {
+        width: auto;
+        text-align: left;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-bottom: none;
     }
 
     .buttons {
-        display: none;
+        flex-direction: row;
+        width: auto;
+        margin-top: 0;
+        margin-left: 2rem;
     }
+
+    .buttons button {
+        margin: 0 0.5rem;
+        width: auto;
+    }
+}
+
+.mobileMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    z-index: 40;
+    padding: 5rem 2rem;
+    overflow-y: auto;
 }

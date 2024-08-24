@@ -119,8 +119,8 @@ const Home: React.FC = () => {
             </div>
             <div className="h-full min-h-128">
                 <NewsUpdates />
-            </div>
-            <div>
+            </div >
+            <div className="h-full min-h-128"> 
                 <SuccessStories />
             </div>
             <div>

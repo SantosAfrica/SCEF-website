@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import React, { useState } from 'react';
+import { TfiArrowCircleLeft, TfiArrowCircleRight } from "react-icons/tfi";
 
 const GetInvolved: React.FC = () => {
     const cards = [
         {
-            title: 'Volunteer',
-            description: 'Founded to transform African education, Edu-Aid Africa is dedicated to providing educational resources and support to underprivileged areas across Africa.',
+            title: 'Volunteer!',
+            description: 'Founded to transform African education, Edu-Aid Africa is dedicated to providing educational resources and support to underprivileged areas across Africa. Founded to transform African education, Edu-Aid Africa is dedicated to providing educational resources and support to',
             image: '/images/volunteer.svg',
         },
         {
@@ -22,20 +22,6 @@ const GetInvolved: React.FC = () => {
 
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    useEffect(() => {
-        const updateVisibleCards = () => {
-            const width = window.innerWidth;
-            // Adjust card visibility based on screen width
-        };
-
-        updateVisibleCards();
-        window.addEventListener('resize', updateVisibleCards);
-
-        return () => {
-            window.removeEventListener('resize', updateVisibleCards);
-        };
-    }, []);
-
     const handleNext = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % cards.length);
     };
@@ -44,81 +30,106 @@ const GetInvolved: React.FC = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + cards.length) % cards.length);
     };
 
-    const displayedCards = () => {
-        const itemsToDisplay = cards.slice(currentIndex, currentIndex + 1);
-        return itemsToDisplay;
-    };
-
     return (
-        <section className="pb-10 px-8 lg:px-20 bg-white flex flex-col items-center">
-            <h2 className="heading w-fit font-poppins text-3xl md:text-4xl xl:text-5xl text-blue mb-4 text-center">
+        <section className="pb-10 px-4 md:px-8 lg:px-20 bg-white">
+            <h2 className="heading font-poppins text-3xl md:text-4xl xl:text-5xl text-blue-900 mb-2 text-left relative inline-block">
                 Get Involved
+                <span className="absolute bottom-0 left-0 w-full h-1 bg-yellow-400"></span>
             </h2>
-            <p className="text-gray-600 w-110 mb-8 text-center">
+            <p className="text-gray-600 max-w-2xl mb-16 text-left mt-4">
                 Make a change in Africa through education by getting involved directly with Santos Creations Educational Foundation.
             </p>
-            <div className="relative flex justify-center items-center w-full mt-6">
-                <button
-                    onClick={handlePrevious}
-                    className={`absolute left-4 md:left-8 lg:left-16 z-10 border-gray-500 border-2 h-fit w-fit px-4 py-2 rounded-full bg-white ${cards.length > 1 ? '' : 'hidden'
-                        }`}
-                >
-                    &lt;
-                </button>
-
-                <div className="flex justify-center gap-6">
-                    {displayedCards().map((card, index) => (
+            <div className="relative w-full max-w-[585px] mx-auto mt-24">
+                <div className="relative h-[670px]">
+                    {cards.map((card, index) => (
                         <div
                             key={index}
-                            className="flex flex-col relative items-center py-6 h-auto w-full sm:h-130 sm:w-124 sm:py-20 text-white bg-liteblue rounded-2xl shadow-lg p-6 transform transition-all duration-500"
+                            className={`absolute top-0 left-0 rounded-t-3xl shadow-lg overflow-hidden transition-all duration-500 ${
+                                index === currentIndex ? 'z-30' : index === (currentIndex + 1) % cards.length ? 'z-20' : 'z-10'
+                            }`}
                             style={{
-                                transform: ` translateY(${(currentIndex) * 1}%)`,
-
-                                zIndex: cards.length - index,
+                                width: index === currentIndex ? '100%' : index === (currentIndex + 1) % cards.length ? '93%' : '84%',
+                                height: '670px',
+                                top: index === currentIndex ? '0' : index === (currentIndex + 1) % cards.length ? '-35px' : '-70px',
+                                left: index === currentIndex ? '0' : index === (currentIndex + 1) % cards.length ? '3.5%' : '8%',
+                                backgroundColor: '#3366CC',
+                                borderTop: '4px solid #2255BB',
                             }}
                         >
-                            <img
-                                src={card.image}
-                                alt={card.title}
-                                className="mb-4 h-32 sm:h-52"
-                            />
-                            <div className="flex sm:p-4 sm:px-8 flex-col items-center gap-6 sm:gap-16 flex-grow">
-                                <div className="flex flex-col gap-8">
-                                    <h3 className="text-4xl text-yellow font-bold mb-2 border-b-2 pb-6">
-                                        {card.title}
-                                    </h3>
-                                    <p className="mb-4">{card.description}</p>
+                            {index === currentIndex && (
+                                <div className="p-6 text-white h-full flex flex-col items-center">
+                                    <img
+                                        src={card.image}
+                                        alt={card.title}
+                                        className="w-full h-40 object-contain mb-4"
+                                    />
+                                    <h3 className="text-3xl font-bold mb-4 text-center px-2 py-1" style={{ color: '#FFD700' }}>{card.title}</h3>
+                                    <div className="w-full h-px bg-white my-4"></div>
+                                    <p className="mb-6 text-sm flex-grow text-center">{card.description}</p>
+                                    <button className="w-[182px] h-[48px] bg-transparent border-2 border-white py-2 px-8 rounded-3xl mt-auto">
+                                        {card.title === 'Volunteer!' ? 'Volunteer Now' : 'Get Involved'}
+                                    </button>
                                 </div>
-                                <button className="w-fit bg-liteblue border-2 border-white py-2 px-4 rounded-lg mt-4">
-                                    Get Involved
-                                </button>
-                            </div>
+                            )}
                         </div>
                     ))}
                 </div>
-
-                <button
-                    onClick={handleNext}
-                    className={`absolute right-4 md:right-8 lg:right-16 z-10 border-gray-500 border-2 h-fit w-fit px-4 py-2 rounded-full bg-white ${cards.length > 1 ? '' : 'hidden'
-                        }`}
-                >
-                    &gt;
-                </button>
-            </div>
-
-            <div className="mt-6 flex justify-center gap-4 md:hidden">
-                <button
-                    onClick={handlePrevious}
-                    className="border-gray-500 border-2 h-fit w-fit px-4 py-2 rounded-full bg-white"
-                >
-                    &lt;
-                </button>
-                <button
-                    onClick={handleNext}
-                    className="border-gray-500 border-2 h-fit w-fit px-4 py-2 rounded-full bg-white"
-                >
-                    &gt;
-                </button>
+                <div className="hidden md:block">
+                    <button
+                        onClick={handlePrevious}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full text-gray-500 text-3xl"
+                        style={{
+                            width: '72px',
+                            height: '72px',
+                            padding: '14.4px',
+                            borderRadius: '180px 0px 0px 0px',
+                            border: '2.7px solid transparent',
+                        }}
+                    >
+                        <TfiArrowCircleLeft />
+                    </button>
+                    <button
+                        onClick={handleNext}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-full text-gray-500 text-3xl"
+                        style={{
+                            width: '72px',
+                            height: '72px',
+                            padding: '14.4px',
+                            borderRadius: '180px 0px 0px 0px',
+                            border: '2.7px solid transparent',
+                        }}
+                    >
+                        <TfiArrowCircleRight />
+                    </button>
+                </div>
+                <div className="flex justify-center mt-4 md:hidden">
+                    <button
+                        onClick={handlePrevious}
+                        className="text-gray-500 text-3xl mr-4"
+                        style={{
+                            width: '72px',
+                            height: '72px',
+                            padding: '14.4px',
+                            borderRadius: '180px 0px 0px 0px',
+                            border: '2.7px solid transparent',
+                        }}
+                    >
+                        <TfiArrowCircleLeft />
+                    </button>
+                    <button
+                        onClick={handleNext}
+                        className="text-gray-500 text-3xl ml-4"
+                        style={{
+                            width: '72px',
+                            height: '72px',
+                            padding: '14.4px',
+                            borderRadius: '180px 0px 0px 0px',
+                            border: '2.7px solid transparent',
+                        }}
+                    >
+                        <TfiArrowCircleRight />
+                    </button>
+                </div>
             </div>
         </section>
     );
