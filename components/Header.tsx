@@ -16,7 +16,7 @@ const Header: React.FC = () => {
                 <Image src="/images/SCEF.svg" alt="SCEF Logo" width={100} height={40} />
             </div>
 
-            <div className={`${isMenuOpen ? styles.mobileMenu : 'hidden'} lg:flex flex-col lg:flex-row items-center justify-between lg:justify-end w-full lg:w-auto`}>
+            <div className={`${isMenuOpen ? styles.mobileMenu : 'hidden'} lg:flex flex-col lg:flex-row lg:pl-10 items-center flex-grow justify-between  w-full lg:w-auto`}>
                 <nav className={styles.nav}>
                     <Link href="/" className="text-gray-700 hover:text-[#3366CC]">Home</Link>
                     <div className="relative group">

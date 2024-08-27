@@ -31,8 +31,8 @@ const Partners: React.FC<PartnersProps> = ({ partners }) => {
                     {[...partners, ...partners, ...partners, ...partners].map((partner, index) => (
                         <div key={index} className="text-center">
                             <Image src={partner.logo} alt={partner.name}
-                                width={100} // Adjust width as needed
-                                height={50} // Adjust height as needed 
+                                width={150} // Adjust width as needed
+                                height={100} // Adjust height as needed 
                             />
                         </div>
                     ))}
