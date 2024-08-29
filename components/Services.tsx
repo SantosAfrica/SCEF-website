@@ -13,7 +13,7 @@ const Services: React.FC = () => {
 
     const services = [
         {
-            image: '/images/about1.png',
+            image: '/images/Eduaid.png',
             altText: 'EduAid Africa',
             place: 'Africa',
             title: 'EduAid Africa',
@@ -22,8 +22,8 @@ const Services: React.FC = () => {
             buttonLink: '#'
         },
         {
-            image: '/images/about2.png',
-            altText: 'Service 2',
+            image: '/images/NESA.png',
+            altText: 'Nesa Africa',
             place: 'Africa',
             title: 'New School Award',
             description: "Recognizing excellence in new educational facilities across Africa.",
@@ -31,27 +31,27 @@ const Services: React.FC = () => {
             buttonLink: '#'
         },
         {
-            image: '/images/about3.png',
-            altText: 'Service 3',
-            place: 'Africa',
+            image: '/images/Advocacy.png',
+            altText: 'Advocacy',
+            place: 'Services',
             title: 'Advocacy Services',
             description: "Providing advocacy and support for educational rights and reforms.",
             buttonText: "Learn More",
             buttonLink: '#'
         },
         {
-            image: '/images/about4.png',
-            altText: 'Service 4',
-            place: 'Africa',
+            image: '/images/EON.png',
+            altText: 'Education Online',
+            place: 'Nigeria',
             title: 'Education Online',
             description: "Bringing quality education to remote areas through online platforms.",
             buttonText: "Learn More",
             buttonLink: '#'
         },
         {
-            image: '/images/homeBG.jpg',
-            altText: 'Service 5',
-            place: 'Africa',
+            image: '/images/E-library.png',
+            altText: 'E-library',
+            place: 'Nigeria',
             title: 'E-Library',
             description: "Providing access to a vast collection of digital books and resources.",
             buttonText: "Explore E-Library",
@@ -62,10 +62,10 @@ const Services: React.FC = () => {
 
     return (
         <section className="py-10 mb-4 md:mb-16  bg-white px-6 lg:px-20">
-            <div className="container  ">
+            <div className="container">
                 <h2 className="heading w-fit font-poppins text-3xl md:text-4xl xl:text-5xl text-blue">Our Services</h2>
                 <p className="text-lg  text-gray-700 mb-10">Get to know SCEF and how we help strengthen Africa's educational system through our different chapters.</p>
-                <div className="w-full h-full flex flex-col gap-4 sm:flex-row px-0 lg:px-6 sm:h-72 md:h-128 justify-center">
+                <div className="w-full h-full flex flex-col gap-6 sm:flex-row px-0 lg:px-6 sm:h-72 md:h-128 justify-center">
                     {services.map((service, index) => (
                         <ServiceCard
                             key={index}

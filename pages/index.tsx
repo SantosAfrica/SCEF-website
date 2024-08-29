@@ -68,27 +68,27 @@ const Home: React.FC = () => {
     ];
     const partners = [
         {
-            logo: '/images/GET2.png',
+            logo: '/images/GET2.svg',
             name: 'GET2',
         },
         {
-            logo: '/images/RON 2.png',
+            logo: '/images/RON 2.svg',
             name: 'RON 2',
         },
         {
-            logo: '/images/CV+HR 1.png',
+            logo: '/images/CV+HR 1.svg',
             name: 'CV+HR',
         },
         {
-            logo: '/images/RON1.png',
+            logo: '/images/RON1.svg',
             name: 'RON1',
         },
         {
-            logo: '/images/GETS 1.png',
+            logo: '/images/GETS 1.svg',
             name: 'GETS1',
         },
         {
-            logo: '/images/PRS1.png',
+            logo: '/images/PRS 1.svg',
             name: 'PRS1',
         },
     ];
@@ -120,7 +120,7 @@ const Home: React.FC = () => {
             <div className="h-full min-h-128">
                 <NewsUpdates />
             </div >
-            <div className="h-full min-h-128"> 
+            <div className="h-full min-h-128">
                 <SuccessStories />
             </div>
             <div>

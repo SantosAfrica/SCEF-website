@@ -44,9 +44,8 @@ const GetInvolved: React.FC = () => {
                     {cards.map((card, index) => (
                         <div
                             key={index}
-                            className={`absolute top-0 left-0 rounded-t-3xl shadow-lg overflow-hidden transition-all duration-500 ${
-                                index === currentIndex ? 'z-30' : index === (currentIndex + 1) % cards.length ? 'z-20' : 'z-10'
-                            }`}
+                            className={`absolute top-0 left-0 rounded-t-3xl shadow-lgoverflow-hidden transition-all duration-500 ${index === currentIndex ? 'z-30' : index === (currentIndex + 1) % cards.length ? 'z-20' : 'z-10'
+                                }`}
                             style={{
                                 width: index === currentIndex ? '100%' : index === (currentIndex + 1) % cards.length ? '93%' : '84%',
                                 height: '670px',
@@ -57,7 +56,7 @@ const GetInvolved: React.FC = () => {
                             }}
                         >
                             {index === currentIndex && (
-                                <div className="p-6 text-white h-full flex flex-col items-center">
+                                <div className="p-6 text-white h-fit flex flex-col my-24 items-center justify-between">
                                     <img
                                         src={card.image}
                                         alt={card.title}

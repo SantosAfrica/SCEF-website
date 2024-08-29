@@ -29,8 +29,8 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
         <div
             className={classNames(
                 'transition-all duration-500 bg-cover bg-center rounded-lg shadow-lg overflow-hidden',
-                { ' w-full sm:w-20 md:w-32 lg:w-40 mx-1 h-fit sm:h-100  md:h-128 cursor-pointer': !isExpanded },
-                { ' w-full md:w-6/12 lg:w-6/12 h-100 sm:h-100 md:h-128': isExpanded }
+                { ' w-full sm:w-20 md:w-32 lg:w-40 mx-1  h-32  md:h-128 cursor-pointer': !isExpanded },
+                { ' w-full md:w-6/12 lg:w-6/12 h-100 md:h-128': isExpanded }
             )}
             style={{ backgroundImage: `url(${image})` }}
             onClick={onClick}
